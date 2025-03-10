@@ -16,7 +16,7 @@ const handlePrevious = () => {
   if (step === 1) {
     return; // Prevent step from going below 1
   } else {
-    setStep(step - 1); 
+    setStep((s)=>s-1); 
   }
 }
 
@@ -24,11 +24,11 @@ const handleNext = () => {
   if (step === 3) {
     return; // Prevent step from going above 3
   } else {
-    setStep(step + 1); 
+    setStep((s)=>s+1); 
   }
 }
 // This function toggles the state 'isOpen' between true and false when the button is clicked.
-const handleClick = () => setIsOpen(!isOpen);
+const handleClick = () => setIsOpen((is)=>!is);
 
 return (
   
@@ -58,6 +58,7 @@ return (
 )}
 
   
+
 
 
 export default App
